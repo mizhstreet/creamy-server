@@ -1,0 +1,39 @@
+{
+  "name": "creamy-graphql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev --respawn src/index.ts",
+    "start": "NODE_ENV=production node dist/index.js",
+    "linkall": "yarn link node-deploy",
+    "build": "tsc",
+    "deploy": "node-deploy $(pwd)"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.19.1",
+    "bcryptjs": "^2.4.3",
+    "class-validator": "^0.12.2",
+    "cors": "^2.8.5",
+    "dataloader": "^2.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "graphql": "^15.4.0",
+    "ioredis": "^4.19.4",
+    "mime": "^2.4.7",
+    "pg": "^8.5.1",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^1.1.1",
+    "typeorm": "^0.2.29"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/connect-redis": "^0.0.16",
+    "@types/express": "^4.17.9",
+    "@types/ioredis": "^4.17.10",
+    "@types/node": "^14.14.20",
+    "ts-node-dev": "^1.1.1",
+    "typescript": "^4.1.3"
+  }
+}
