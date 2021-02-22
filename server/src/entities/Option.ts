@@ -1,16 +1,9 @@
 import { Field, ID, ObjectType } from "type-graphql";
-import {
-  BaseEntity,
-  Column,
-  DeleteDateColumn,
-  Entity,
-  PrimaryGeneratedColumn,
-  UpdateDateColumn,
-} from "typeorm";
+import { BaseEntity, Column, DeleteDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
 @ObjectType()
 @Entity()
-export class User extends BaseEntity {
+export class Option extends BaseEntity {
   @Field(() => ID)
   @PrimaryGeneratedColumn("increment")
   id: number;
@@ -25,38 +18,29 @@ export class User extends BaseEntity {
   @Field()
   @Column({
     type: "varchar",
-    length: 16,
-    unique: true,
-  })
-  username: string;
-
-  @Field()
-  @Column({
-    type: "varchar",
-    length: "500",
-  })
-  password: string;
-
-  @Field()
-  @Column({
-    type: "boolean",
-    default: "false",
-  })
-  isDeleted: boolean;
-
-  @Field()
-  @Column({
-    type: "boolean",
-    default: "false",
-  })
-  isAdmin: boolean;
-
-  @Field()
-  @Column({
-    type: "varchar",
     length: 500,
   })
   image: string;
+
+  @Field()
+  @Column({
+    type: "int",
+    default: 0,
+  })
+  stock: number;
+
+  @Field()
+  @Column({
+    type: "int",
+    default: 0,
+  })
+  price: number;
+
+  @Field()
+  @Column({
+    type: "int",
+  })
+  stockPrice: number;
 
   @Field()
   @UpdateDateColumn()
