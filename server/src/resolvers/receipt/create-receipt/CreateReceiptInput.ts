@@ -15,7 +15,7 @@ export class CreateReceiptInput {
 @InputType()
 class CreateReceiptItemInput {
   @Field()
-  productid: number;
+  productid: string;
 
   @Field()
   price: number;
@@ -29,10 +29,10 @@ class CreateReceiptItemInput {
   @Field()
   optionPrice: number;
 
-  @Field()
+  @Field({ nullable: true })
   sizeName?: string;
 
-  @Field()
+  @Field({ nullable: true })
   sizePrice?: number;
 
   @Field()

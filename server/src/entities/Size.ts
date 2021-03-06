@@ -33,15 +33,15 @@ export class Size extends BaseEntity {
 
   @Field()
   @UpdateDateColumn()
-  created!: Date;
+  created: Date;
 
   @Field()
   @UpdateDateColumn()
-  updated!: Date;
+  updated: Date;
 
   @Field()
   @DeleteDateColumn()
-  deletedAt?: Date;
+  deletedAt: Date;
 
   @Field(() => Product, { nullable: true })
   @ManyToOne(() => Product, (product) => product.sizes)

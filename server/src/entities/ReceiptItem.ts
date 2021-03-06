@@ -44,14 +44,14 @@ export class ReceiptItem extends BaseEntity {
   })
   optionPrice: number;
 
-  @Field()
+  @Field({ nullable: true })
   @Column({
     type: "varchar",
     nullable: true,
   })
   sizeName?: string;
 
-  @Field()
+  @Field({ nullable: true })
   @Column({
     type: "int",
     nullable: true,
@@ -82,5 +82,5 @@ export class ReceiptItem extends BaseEntity {
 
   @Field(() => Product, { nullable: true })
   @ManyToOne(() => Product)
-  product: Product;
+  product: Promise<Product>;
 }

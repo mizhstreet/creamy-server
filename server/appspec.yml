@@ -1,0 +1,28 @@
+---
+files:
+  - destination: /opt/creamy-server
+    source: /
+hooks:
+  AfterInstall:
+    - location: server/aws/codedeploy/AfterInstall/0_changePermissions.sh
+      runas: root
+      timeout: 300
+    - location: server/aws/codedeploy/AfterInstall/1_installPackages.sh
+      runas: ec2-user
+      timeout: 300
+    - location: server/aws/codedeploy/AfterInstall/2_compile.sh
+      runas: ec2-user
+      timeout: 300
+  ApplicationStart:
+    - location: server/aws/codedeploy/ApplicationStart.sh
+      runas: root
+      timeout: 300
+  BeforeInstall:
+    - location: server/aws/codedeploy/BeforeInstall/0_stopExistingProcess.sh
+      runas: root
+      timeout: 300
+    - location: server/aws/codedeploy/BeforeInstall/1_removePreviousInstallation.sh
+      runas: ec2-user
+      timeout: 300
+os: linux
+version: 0.0

@@ -46,17 +46,17 @@ export class Product extends BaseEntity {
 
   @Field()
   @UpdateDateColumn()
-  created!: Date;
+  created: Date;
 
   @Field()
   @UpdateDateColumn()
-  updated!: Date;
+  updated: Date;
 
   @Field()
   @DeleteDateColumn()
-  deletedAt?: Date;
+  deletedAt: Date;
 
-  @Field(() => [Size], { nullable: true })
+  @Field(() => [Size])
   @OneToMany(() => Size, (size) => size.product, { cascade: ["insert", "update"] })
   sizes: Size[];
 }

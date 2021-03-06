@@ -51,11 +51,15 @@ const bootstrap = async () => {
       name: "qid",
       secret: "aslkdfjoiq12312",
       resave: false,
+      proxy: true,
       saveUninitialized: false,
       cookie: {
         httpOnly: true,
-        secure: process.env.NODE_ENV === "production",
+        secure: false,
         maxAge: 1000 * 60 * 60 * 24 * 7 * 365,
+        // secure: process.env.NODE_ENV === "production",
+        // sameSite: "none",
+        // domain: "creamyy.mrmbiuzz.link",
       },
     }),
   );

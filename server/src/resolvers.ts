@@ -7,6 +7,7 @@ import { OptionsResolver } from "./resolvers/option/options/OptionsResolver";
 import { CreateProductResolver } from "./resolvers/product/create-product/CreateProductResolver";
 import { DeleteProductResolver } from "./resolvers/product/delete-product/DeleteProductResolver";
 import { ProductsResolver } from "./resolvers/product/products/ProductsResolver";
+import { SizesFieldResolver } from "./resolvers/product/sizes-field/SizesFieldResolver";
 import { CreateReceiptResolver } from "./resolvers/receipt/create-receipt/CreateReceiptResolver";
 import { ItemsFieldResolver } from "./resolvers/receipt/items-field/ItemsFieldResolver";
 import { ReceiptResolver } from "./resolvers/receipt/receipt/ReceiptResolver";
@@ -36,4 +37,5 @@ export const resolvers = [
   ReceiptResolver,
   ItemsFieldResolver,
   ProductsResolver,
+  SizesFieldResolver,
 ];

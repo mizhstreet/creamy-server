@@ -1,4 +1,5 @@
 import { Request } from "express";
+import { sizesLoaderForProduct } from "../loaders/product/sizesOfProduct";
 import { itemsLoaderForReceipt } from "../loaders/receipt/ItemsOfReceipt";
 // import { authorsLoaderForBook } from "../loaders/book/authorsOfBook";
 // import { booksLoaderForPublisher } from "../loaders/publisher/booksOfPublisher";
@@ -19,6 +20,7 @@ declare module "express-session" {
 export interface IContext {
   req: Request;
   itemsLoaderForReceipt: ReturnType<typeof itemsLoaderForReceipt>;
+  sizesLoaderForProduct: ReturnType<typeof sizesLoaderForProduct>;
   // authorsLoaderForBook: ReturnType<typeof authorsLoaderForBook>;
   // publisherLoaderForBook: ReturnType<typeof publisherLoaderForBook>;
   // categoryLoaderForBook: ReturnType<typeof categoryLoaderForBook>;

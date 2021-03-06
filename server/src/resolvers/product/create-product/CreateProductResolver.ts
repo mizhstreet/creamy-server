@@ -26,12 +26,16 @@ export class CreateProductResolver {
       })
       .promise();
 
-    const sizeArr = sizes.map((s) => {
-      const size = new Size();
-      size.name = s.name;
-      size.price = s.price;
-      return size;
-    });
+    let sizeArr: Size[] | undefined = undefined;
+
+    if (sizes) {
+      sizeArr = sizes.map((s) => {
+        const size = new Size();
+        size.name = s.name;
+        size.price = s.price;
+        return size;
+      });
+    }
 
     const product = await Product.create({
       name,

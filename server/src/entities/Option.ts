@@ -44,7 +44,7 @@ export class Option extends BaseEntity {
 
   @Field()
   @UpdateDateColumn()
-  created!: Date;
+  created: Date;
 
   @Field()
   @UpdateDateColumn()
