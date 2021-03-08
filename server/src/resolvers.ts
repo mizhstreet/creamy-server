@@ -1,9 +1,11 @@
 import { CreateFlavorResolver } from "./resolvers/flavor/create-flavor/CreateFlavorResolver";
 import { DeleteFlavorResolver } from "./resolvers/flavor/delete-flavor/DeleteFlavorResolver";
 import { FlavorsResolver } from "./resolvers/flavor/flavors/FlavorsResolver";
+import { UpdateStockFlavorResolver } from "./resolvers/flavor/update-stock-flavor/UpdateStockFlavorResolver";
 import { CreateOptionResolver } from "./resolvers/option/create-option/CreateOptionResolver";
 import { DeleteOptionResolver } from "./resolvers/option/delete-option/DeleteOptionResolver";
 import { OptionsResolver } from "./resolvers/option/options/OptionsResolver";
+import { UpdateStockOptionResolver } from "./resolvers/option/update-stock-option/UpdateStockFlavorResolver";
 import { CreateProductResolver } from "./resolvers/product/create-product/CreateProductResolver";
 import { DeleteProductResolver } from "./resolvers/product/delete-product/DeleteProductResolver";
 import { ProductsResolver } from "./resolvers/product/products/ProductsResolver";
@@ -38,4 +40,6 @@ export const resolvers = [
   ItemsFieldResolver,
   ProductsResolver,
   SizesFieldResolver,
+  UpdateStockFlavorResolver,
+  UpdateStockOptionResolver,
 ];
