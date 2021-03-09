@@ -100,7 +100,7 @@ resource "aws_security_group" "allow-all-outbound" {
 
 resource "aws_security_group" "allow-internal-postgresql" {
   name        = "allow-internal-postgresql"
-  description = "Allow internal MySQL requests"
+  description = "Allow internal postgresql requests"
   vpc_id      = aws_vpc.creamy.id
 
   ingress {
@@ -111,8 +111,8 @@ resource "aws_security_group" "allow-internal-postgresql" {
   }
 }
 
-resource "aws_security_group" "allow-public-postgres" {
-  name        = "allow-public-postgres"
+resource "aws_security_group" "allow-public-postgresql" {
+  name        = "allow-public-postgresql"
   description = "Allow connection to postgres instance from internet"
   vpc_id      = aws_vpc.creamy.id
   ingress {
