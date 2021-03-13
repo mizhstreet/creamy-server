@@ -14,11 +14,14 @@ import { CreateReceiptResolver } from "./resolvers/receipt/create-receipt/Create
 import { ItemsFieldResolver } from "./resolvers/receipt/items-field/ItemsFieldResolver";
 import { ReceiptResolver } from "./resolvers/receipt/receipt/ReceiptResolver";
 import { ReceiptsResolver } from "./resolvers/receipt/receipts/ReceiptsResolver";
+import { UserFieldResolver } from "./resolvers/receipt/user-field/UserFieldResolver";
 import { CreateUserResolver } from "./resolvers/user/create-user/CreateUserResolver";
 import { DeleteUserResolver } from "./resolvers/user/delete-user/DeleteUserResolver";
 import { LoginResolver } from "./resolvers/user/login/LoginResolver";
 import { UpdateUserResolver } from "./resolvers/user/update-user/UpdateUserResolver";
 import { UsersResolver } from "./resolvers/user/users/UsersResolver";
+import { ReceiptItemProductFieldResolver } from "./resolvers/receipt-item/product-field/ReceiptItemProductFieldResolver";
+import { TotalReceiptResolver } from "./resolvers/receipt/total-receipt/TotalReceiptResolver";
 
 export const resolvers = [
   UsersResolver,
@@ -42,4 +45,7 @@ export const resolvers = [
   SizesFieldResolver,
   UpdateStockFlavorResolver,
   UpdateStockOptionResolver,
+  UserFieldResolver,
+  ReceiptItemProductFieldResolver,
+  TotalReceiptResolver,
 ];

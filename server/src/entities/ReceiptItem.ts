@@ -82,5 +82,5 @@ export class ReceiptItem extends BaseEntity {
 
   @Field(() => Product, { nullable: true })
   @ManyToOne(() => Product)
-  product: Promise<Product>;
+  product: Product;
 }
