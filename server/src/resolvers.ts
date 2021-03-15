@@ -22,6 +22,7 @@ import { UpdateUserResolver } from "./resolvers/user/update-user/UpdateUserResol
 import { UsersResolver } from "./resolvers/user/users/UsersResolver";
 import { ReceiptItemProductFieldResolver } from "./resolvers/receipt-item/product-field/ReceiptItemProductFieldResolver";
 import { TotalReceiptResolver } from "./resolvers/receipt/total-receipt/TotalReceiptResolver";
+import { MeResolver } from "./resolvers/user/me/MeResolver";
 
 export const resolvers = [
   UsersResolver,
@@ -48,4 +49,5 @@ export const resolvers = [
   UserFieldResolver,
   ReceiptItemProductFieldResolver,
   TotalReceiptResolver,
+  MeResolver,
 ];
