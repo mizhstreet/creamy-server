@@ -1,4 +1,4 @@
-import { Request } from "express";
+import { Request, Response } from "express";
 import { sizesLoaderForProduct } from "../loaders/product/sizesOfProduct";
 import { productLoaderForReceiptItem } from "../loaders/receipt-item/ProductOfReceiptItems";
 import { itemsLoaderForReceipt } from "../loaders/receipt/ItemsOfReceipt";
@@ -13,6 +13,7 @@ declare module "express-session" {
 
 export interface IContext {
   req: Request;
+  res: Response;
   itemsLoaderForReceipt: ReturnType<typeof itemsLoaderForReceipt>;
   sizesLoaderForProduct: ReturnType<typeof sizesLoaderForProduct>;
   userLoaderForReceipt: ReturnType<typeof userLoaderForReceipt>;

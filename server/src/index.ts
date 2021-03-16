@@ -55,11 +55,10 @@ const bootstrap = async () => {
       saveUninitialized: false,
       cookie: {
         httpOnly: true,
-        secure: false,
         maxAge: 1000 * 60 * 60 * 24 * 7 * 365,
-        // secure: process.env.NODE_ENV === "production",
-        // sameSite: "none",
-        // domain: "creamyy.mrmbiuzz.link",
+        secure: process.env.NODE_ENV === "production",
+        sameSite: process.env.NODE_ENV === "production" ? "none" : undefined,
+        domain: process.env.NODE_ENV === "production" ? "creamyy.mrmbiuzz.link" : "localhost",
       },
     }),
   );

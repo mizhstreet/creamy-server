@@ -3,8 +3,9 @@ import { productLoaderForReceiptItem } from "./loaders/receipt-item/ProductOfRec
 import { itemsLoaderForReceipt } from "./loaders/receipt/ItemsOfReceipt";
 import { userLoaderForReceipt } from "./loaders/receipt/UserOfReceipt";
 
-export const context = ({ req }: any): any => ({
+export const context = ({ req, res }: any): any => ({
   req,
+  res,
   itemsLoaderForReceipt: itemsLoaderForReceipt(),
   sizesLoaderForProduct: sizesLoaderForProduct(),
   userLoaderForReceipt: userLoaderForReceipt(),
