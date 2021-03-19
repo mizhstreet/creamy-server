@@ -25,6 +25,7 @@
 ## インフラの構造
 - 全てのインフラはAWSで
 - Terraformでインフラ管理
+- AutoScalingGroupに複数のEC2Instanceに入れるつもりだったのですが、貧乏のため、やめました。
 - [![INSERT YOUR GRAPHIC HERE](https://lh3.googleusercontent.com/pw/ACtC-3fgoHI601hO3idi6piZHyTWCyVPMuS66fddnFNDmQ11IpFPSzB_M3g7otGnO0mirlnQttVlNM2X6hV_OywUJRqto2gFkbFaOTULPdJTCnAkcVFUOPDQrsTgDRpUcWMTB-ImVptvGqxquyvLU7rkibIg=w1112-h625-no?authuser=0)]()
 ---
 
@@ -55,7 +56,7 @@ $ git clone https://github.com/mizhstreet/creamy-server.git
 $ yarn dev
 ```
 
-### インフラautomation
+### インフラデプロイ
 - /terraformでプランを見る
 ```shell
 $ terraform plan
