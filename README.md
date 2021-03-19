@@ -3,7 +3,7 @@
 
 # Creamy - 31アイスクリーム会計サーバーシステム
 
-## [GraphQL Playground https://creamyy.mrmbiuzz.link/graphql](https://creamy31.vercel.app/)
+## [GraphQL Playground https://creamyy.mrmbiuzz.link/graphql](https://creamyy.mrmbiuzz.link/graphql)
 > Powered by Apollo Server, TypeGraphQL
 
 ## 目次
